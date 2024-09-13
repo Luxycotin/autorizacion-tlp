@@ -60,10 +60,22 @@ export const todosPage = () => {
   th4.classList.add("border", "px-4", "py-2");
   th4.textContent = "Owner Id";
 
+  // const th5  = document.createElement("th");
+  // th5.classList.add("border", "px-4", "py-2");
+
+  // const th6 = document.createElement("th");
+  // th6.classList.add("border", "px-4", "py-2");
+
+
+
+
   tr.appendChild(th1);
   tr.appendChild(th2);
   tr.appendChild(th3);
   tr.appendChild(th4);
+  // tr.appendChild(th5);
+  // tr.appendChild(th6);
+  
 
   thead.appendChild(tr);
 
@@ -75,7 +87,7 @@ export const todosPage = () => {
 
   container.appendChild(btnHome);
   fetch("http://localhost:4000/todos",{
-    Credential:"include"
+    credentials:"include"
   })
     .then((response) => response.json())
     .then((data) => {
@@ -100,10 +112,23 @@ export const todosPage = () => {
         td4.classList.add("border", "px-4", "py-2");
         td4.textContent = todo.owner;
 
+        // const td5  = document.createElement("button");
+        // td5.classList.add("border", "px-4", "py-2");
+        // td5.textContent = "ELIMINAR XD"; 
+
+        // const  td6 = document.createElement("button");
+        // td6.classList.add("border", "px-4", "py-2");
+        // td6 = "EDITAR XD";
+
+
+
+
         tr.appendChild(td1);
-        tr.appendChild(td2);
+        tr.appendChild(td2);        
         tr.appendChild(td3);
         tr.appendChild(td4);
+        // tr.appendChild(td5);
+        // tr.appendChild(td6);
         tbody.appendChild(tr);
       });
     });
